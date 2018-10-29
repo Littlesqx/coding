@@ -1,0 +1,23 @@
+{
+    "name": "littlesqx/design-pattern",
+    "description": "design-pattern practice",
+    "require-dev": {
+        "phpunit/phpunit": "^7.4"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "littlesqx",
+            "email": "littlesqx@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "DesignPattern\\": "src"
+        }
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit"
+    }
+}
