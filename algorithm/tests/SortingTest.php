@@ -14,5 +14,18 @@ class SortingTest extends TestCase
         $sorted = \Algorithm\Sorting\InsertionSort\sort($array);
         $expect = $array; sort($expect);
         $this->assertSame(array_same($sorted, $expect), true);
+
+        $array = generate_random_int_array(20);
+        $sorted = \Algorithm\Sorting\InsertionSort\sort2($array);
+        $expect = $array; sort($expect);
+        $this->assertSame(array_same($sorted, $expect), true);
+    }
+
+    public function testBubbleSort()
+    {
+        $array = generate_random_int_array(10);
+        $sorted = \Algorithm\Sorting\BubbleSort\sort($array);
+        $expect = $array; sort($expect);
+        $this->assertSame(array_same($sorted, $expect), true);
     }
 }

@@ -20,6 +20,7 @@
         },
         "files": [
             "src/Sorting/InsertionSort.php",
+            "src/Sorting/BubbleSort.php",
             "src/Helper.php"
         ]
     },
