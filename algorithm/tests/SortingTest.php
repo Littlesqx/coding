@@ -23,9 +23,18 @@ class SortingTest extends TestCase
 
     public function testBubbleSort()
     {
-        $array = generate_random_int_array(10);
+        $array = generate_random_int_array(20);
         $sorted = \Algorithm\Sorting\BubbleSort\sort($array);
         $expect = $array; sort($expect);
         $this->assertSame(array_same($sorted, $expect), true);
     }
+
+    public function testSelectionSort()
+    {
+        $array = generate_random_int_array(20);
+        $sorted = \Algorithm\Sorting\SelectionSort\sort($array);
+        $expect = $array; sort($expect);
+        $this->assertSame(array_same($sorted, $expect), true);
+    }
+
 }
