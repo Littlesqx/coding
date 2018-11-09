@@ -11,7 +11,6 @@
 
 namespace DesignPattern\Structural\Decorator;
 
-
 class JsonRenderer extends RendererDecorator
 {
 

@@ -11,7 +11,6 @@
 
 namespace DesignPattern\Structural\Decorator;
 
-
 abstract class RendererDecorator implements RenderableInterface
 {
     /**

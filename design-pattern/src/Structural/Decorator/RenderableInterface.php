@@ -8,7 +8,6 @@
 
 namespace DesignPattern\Structural\Decorator;
 
-
 interface RenderableInterface
 {
     public function renderData(): string;

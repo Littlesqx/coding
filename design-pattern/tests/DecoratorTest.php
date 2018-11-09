@@ -11,7 +11,6 @@
 
 namespace DesignPattern\Tests;
 
-
 use DesignPattern\Structural\Decorator\JsonRenderer;
 use DesignPattern\Structural\Decorator\Webservice;
 use DesignPattern\Structural\Decorator\XmlRenderer;

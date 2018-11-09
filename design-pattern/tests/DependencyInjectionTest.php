@@ -11,7 +11,6 @@
 
 namespace DesignPattern\Tests;
 
-
 use DesignPattern\Structural\DependencyInjection\DatabaseConfiguration;
 use DesignPattern\Structural\DependencyInjection\DatabaseConnection;
 use PHPUnit\Framework\TestCase;

@@ -11,7 +11,6 @@
 
 namespace DesignPattern\Structural\Decorator;
 
-
 class XmlRenderer extends RendererDecorator
 {
 
