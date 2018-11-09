@@ -9,9 +9,11 @@
  * with this source code in the file LICENSE.
  */
 
-namespace DesignPattern\Structural\Decorator;
+namespace DesignPattern\Structural\Facade;
 
-interface RenderableInterface
+interface OsInterface
 {
-    public function renderData(): string;
+    public function halt();
+
+    public function getName(): string;
 }
