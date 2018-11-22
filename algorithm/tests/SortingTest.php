@@ -45,4 +45,12 @@ class SortingTest extends TestCase
         $this->assertSame(array_same($sorted, $expect), true);
     }
 
+    public function testShellSort()
+    {
+        $array = generate_random_int_array(20);
+        $sorted = \Algorithm\Sorting\shellSort($array);
+        $expect = $array; sort($expect);
+        $this->assertSame(array_same($sorted, $expect), true);
+    }
+
 }

@@ -7,10 +7,10 @@ if (!function_exists('mergeSort')) {
     /**
      * mergeSort.
      *
-     * @param $values
+     * @param array $values
      * @return array
      */
-    function mergeSort($values) : array 
+    function mergeSort(array $values) : array
     {
         $len = count($values);
         if ($len < 2) {
