@@ -2,55 +2,82 @@
 
 namespace Algorithm\Tests;
 
-use function Algorithm\array_same;
-use function Algorithm\generate_random_int_array;
+use function Algorithm\arraySame;
+use function Algorithm\isSorted;
+use function Algorithm\randomIntArray;
 use PHPUnit\Framework\TestCase;
 
 class SortingTest extends TestCase
 {
-    public function testInsertionSort()
+
+    /**
+     * sortTest data provider.
+     *
+     * @return array
+     */
+    public function getRandomArray() : array
     {
-        $array = generate_random_int_array(20);
+        return [
+            [randomIntArray(30)],
+        ];
+    }
+
+    /**
+     * @param array $array
+     *
+     * @dataProvider getRandomArray
+     */
+    public function testInsertionSort(array $array)
+    {
         $sorted = \Algorithm\Sorting\InsertionSort\sort($array);
-        $expect = $array; sort($expect);
-        $this->assertSame(array_same($sorted, $expect), true);
+        $this->assertSame(isSorted($array, $sorted), true);
 
-        $array = generate_random_int_array(20);
         $sorted = \Algorithm\Sorting\InsertionSort\sort2($array);
-        $expect = $array; sort($expect);
-        $this->assertSame(array_same($sorted, $expect), true);
+        $this->assertSame(isSorted($array, $sorted), true);
     }
 
-    public function testBubbleSort()
+    /**
+     * @param array $array
+     *
+     * @dataProvider getRandomArray
+     */
+    public function testBubbleSort(array $array)
     {
-        $array = generate_random_int_array(20);
         $sorted = \Algorithm\Sorting\BubbleSort\sort($array);
-        $expect = $array; sort($expect);
-        $this->assertSame(array_same($sorted, $expect), true);
+        $this->assertSame(isSorted($array, $sorted), true);
     }
 
-    public function testSelectionSort()
+    /**
+     * @param array $array
+     *
+     * @dataProvider getRandomArray
+     */
+    public function testSelectionSort(array $array)
     {
-        $array = generate_random_int_array(20);
         $sorted = \Algorithm\Sorting\SelectionSort\sort($array);
-        $expect = $array; sort($expect);
-        $this->assertSame(array_same($sorted, $expect), true);
+        $this->assertSame(isSorted($array, $sorted), true);
     }
 
-    public function testMergeSort()
+    /**
+     * @param array $array
+     *
+     * @dataProvider getRandomArray
+     */
+    public function testMergeSort(array $array)
     {
-        $array = generate_random_int_array(20);
         $sorted = \Algorithm\Sorting\MergeSort($array);
-        $expect = $array; sort($expect);
-        $this->assertSame(array_same($sorted, $expect), true);
+        $this->assertSame(isSorted($array, $sorted), true);
     }
 
-    public function testShellSort()
+    /**
+     * @param array $array
+     *
+     * @dataProvider getRandomArray
+     */
+    public function testShellSort(array $array)
     {
-        $array = generate_random_int_array(20);
         $sorted = \Algorithm\Sorting\shellSort($array);
-        $expect = $array; sort($expect);
-        $this->assertSame(array_same($sorted, $expect), true);
+        $this->assertSame(isSorted($array, $sorted), true);
     }
 
 }

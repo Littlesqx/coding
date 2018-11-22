@@ -4,14 +4,14 @@ namespace Algorithm;
 
 use Faker\Factory;
 
-if (!function_exists('array_same')) {
+if (!function_exists('arraySame')) {
     /**
      * @param array $left
      * @param array $right
      * @param bool $cmpOrder
      * @return bool
      */
-    function array_same(array $left, array $right, $cmpOrder = true) : bool
+    function arraySame(array $left, array $right, $cmpOrder = true) : bool
     {
         if (count($left) !== count($right)) {
             return false;
@@ -31,12 +31,12 @@ if (!function_exists('array_same')) {
     }
 }
 
-if (!function_exists('generate_random_int_array')) {
+if (!function_exists('randomIntArray')) {
     /**
      * @param int $size
      * @return array
      */
-    function generate_random_int_array(int $size) : array
+    function randomIntArray(int $size) : array
     {
         $out = [];
         $faker = Factory::create();
@@ -44,5 +44,18 @@ if (!function_exists('generate_random_int_array')) {
             $out[] = $faker->numberBetween(1, 1000);
         }
         return $out;
+    }
+}
+
+if (!function_exists('isSorted')) {
+    /**
+     * @param array $origin
+     * @param array $sorted
+     * @return bool
+     */
+    function isSorted(array $origin, array $sorted) : bool
+    {
+        sort($origin);
+        return arraySame($sorted, $origin);
     }
 }
