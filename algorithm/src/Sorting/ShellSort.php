@@ -3,7 +3,12 @@
 namespace Algorithm\Sorting;
 
 if (!function_exists('shellSort')) {
-
+    /**
+     * Shell sort.
+     *
+     * @param array $values
+     * @return array
+     */
     function shellSort(array $values) : array
     {
         $len = count($values);
@@ -14,7 +19,7 @@ if (!function_exists('shellSort')) {
                 for ($j = $i - $gap; $j >= 0 && $values[$j] > $key; $j -= $gap) {
                     $values[$j + $gap] = $values[$j];
                 }
-                $values[$j+$gap] = $key;
+                $values[$j + $gap] = $key;
             }
             $gap = (int) floor($gap/2); // $gap >> 1
         }
