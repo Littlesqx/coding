@@ -41,7 +41,7 @@ if (!function_exists('generate_random_int_array')) {
         $out = [];
         $faker = Factory::create();
         for ($i = 0; $i < $size; $i++) {
-            $out[] = $faker->randomDigit;
+            $out[] = $faker->numberBetween(1, 1000);
         }
         return $out;
     }

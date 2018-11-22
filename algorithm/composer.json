@@ -22,6 +22,7 @@
             "src/Sorting/InsertionSort.php",
             "src/Sorting/BubbleSort.php",
             "src/Sorting/SelectionSort.php",
+            "src/Sorting/MergeSort.php",
             "src/Helper.php"
         ]
     },
