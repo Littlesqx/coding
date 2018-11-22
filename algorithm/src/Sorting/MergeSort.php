@@ -5,10 +5,12 @@ namespace Algorithm\Sorting;
 if (!function_exists('mergeSort')) {
 
     /**
+     * mergeSort.
+     *
      * @param $values
      * @return array
      */
-    function mergeSort($values)
+    function mergeSort($values) : array 
     {
         $len = count($values);
         if ($len < 2) {

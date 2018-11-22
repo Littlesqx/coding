@@ -12,8 +12,8 @@ function sort(array $values) : array
 {
     $len = count($values);
     for ($i = 1; $i < $len; $i++) {
-        for ($j = 0; $j < $i + 1; $j++) {
-            if ($values[$j] > $values[$i]) {
+        for ($j = 0; $j < $i; $j++) {
+            if ($values[$i] < $values[$j]) {
                 [$values[$j], $values[$i]] = [$values[$i], $values[$j]];
             }
         }
