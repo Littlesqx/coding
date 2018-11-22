@@ -32,10 +32,10 @@ function sort2(array $values) : array
     $len = count($values);
     for ($i = 1; $i < $len; $i++) {
         $key = $values[$i];
-        for ($j = $i; $j > 0 && $values[$j - 1] > $key; $j--) {
-            $values[$j] = $values[$j-1];
+        for ($j = $i-1; $j >= 0 && $values[$j] > $key; $j--) {
+            $values[$j+1] = $values[$j];
         }
-        $values[$j] = $key;
+        $values[$j+1] = $key;
     }
     return $values;
 }
