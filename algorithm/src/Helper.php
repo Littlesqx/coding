@@ -55,7 +55,6 @@ if (!function_exists('isSorted')) {
      */
     function isSorted(array $origin, array $sorted) : bool
     {
-        sort($origin);
-        return arraySame($sorted, $origin);
+        return sort($origin) && arraySame($sorted, $origin);
     }
 }

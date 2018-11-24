@@ -2,7 +2,6 @@
 
 namespace Algorithm\Tests;
 
-use function Algorithm\arraySame;
 use function Algorithm\isSorted;
 use function Algorithm\randomIntArray;
 use PHPUnit\Framework\TestCase;
