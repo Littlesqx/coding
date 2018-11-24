@@ -40,7 +40,7 @@ if (!function_exists('randomIntArray')) {
     {
         $out = [];
         $faker = Factory::create();
-        for ($i = 0; $i < $size; $i++) {
+        while ($size--) {
             $out[] = $faker->numberBetween(1, 1000);
         }
         return $out;
