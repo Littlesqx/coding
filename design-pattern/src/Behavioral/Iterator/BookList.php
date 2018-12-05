@@ -94,7 +94,7 @@ class BookList implements \Countable, \Iterator
         return count($this->books);
     }
 
-    public function addBook(Book $book)
+    public function addBook(Book $book): self
     {
         $this->books[] = $book;
         return $this;
