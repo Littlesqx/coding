@@ -21,8 +21,8 @@ class DelegationTest extends TestCase
     public function testHowTeamLeadWriteCode()
     {
         $junior = new JuniorDeveloper();
-        $teamlead = new TeamLead($junior);
+        $teamLead = new TeamLead($junior);
 
-        $this->assertEquals($junior->writeBadCode(), $teamlead->writeCode());
+        $this->assertEquals($junior->writeBadCode(), $teamLead->writeCode());
     }
 }
