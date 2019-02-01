@@ -6,7 +6,7 @@ import "fmt"
 
 var globali int = 42
 
-func main()  {
+func main() {
 	// Declare variables
 	// 方式一
 	var s1 int = 42
