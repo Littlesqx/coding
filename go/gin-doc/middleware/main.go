@@ -1,6 +1,7 @@
 package main
 
 import "fmt"
+import "time"
 import "net/http"
 import "github.com/gin-gonic/gin"
 
@@ -27,6 +28,20 @@ func main() {
 
 	r.GET("/", func(c *gin.Context) {
 		c.String(http.StatusOK, "test")
+	})
+
+	// 后台耗时使用协程
+	r.GET("/long_async", func(c *gin.Context) {
+		cCp := c.Copy() // **不应该 使用它里面的原始的 context ，只能去使用它的只读副本
+		go func() {
+			time.Sleep(5 * time.Second) // 模拟耗时
+			fmt.Println("Done! in path ", cCp.Request.URL.Path)
+		}()
+	})
+
+	r.GET("/long_sync", func(c *gin.Context) {
+		time.Sleep(5 * time.Second) // 模拟耗时
+		fmt.Println("Done! in path ", c.Request.URL.Path)
 	})
 
 	r.Run()
