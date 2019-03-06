@@ -9,6 +9,11 @@ type Info struct {
 	Nick string `json:"nick"`
 }
 
+type Login struct {
+	Username string `form:"username" json:"username" binding:"required"`
+	Password string `from:"password" json:"password" binding:"required"`
+}
+
 func main() {
 	r := gin.Default()
 	r.GET("/param/:name", func(c *gin.Context) {
@@ -43,6 +48,32 @@ func main() {
 			"nick": nick,
 			"message2": info.Message,
 		})
+	})
+
+	r.POST("/loginJSON", func(c *gin.Context) {
+		var json Login
+		if err := c.ShouldBindJSON(&json); err == nil {
+			if json.Username == "littlesqx" && json.Password == "1" {
+				c.JSON(http.StatusOK, gin.H{"status": "you are logged in."})
+			} else {
+				c.JSON(http.StatusUnauthorized, gin.H{"status": "unauthorized"})
+			}
+		} else {
+			c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		}
+	})
+
+	r.POST("/loginForm", func(c *gin.Context) {
+		var form Login
+		if err := c.ShouldBindJSON(&form); err == nil {
+			if form.Username == "littlesqx" && form.Password == "1" {
+				c.JSON(http.StatusOK, gin.H{"status": "you are logged in."})
+			} else {
+				c.JSON(http.StatusUnauthorized, gin.H{"status": "unauthorized"})
+			}
+		} else {
+			c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		}
 	})
 
 	r.Run()
