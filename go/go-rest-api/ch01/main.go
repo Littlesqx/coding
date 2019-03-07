@@ -30,7 +30,7 @@ func main() {
 		if err := pingServer(); err != nil {
 			log.Fatal("The router has no response, or it might took too long to start up.", err)
 		}
-		log.Fatal("The router has been deployed successfully.")
+		log.Print("The router has been deployed successfully.")
 	}()
 	log.Printf("Start to listening the incoming requests on http address: %s", ":8080")
 	log.Printf(http.ListenAndServe(":8080", g).Error())
