@@ -1,0 +1,4 @@
+{"level":"INFO","timestamp":"2019-03-07 14:29:23.144","file":"ch03/main.go:52","msg":"Start to listening the incoming requests on http address: :8081"}
+{"level":"INFO","timestamp":"2019-03-07 14:29:23.145","file":"ch03/main.go:50","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2019-03-07 14:30:34.260","file":"ch03/main.go:52","msg":"Start to listening the incoming requests on http address: :8081"}
+{"level":"INFO","timestamp":"2019-03-07 14:30:34.261","file":"ch03/main.go:50","msg":"The router has been deployed successfully."}
