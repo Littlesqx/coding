@@ -1,0 +1,11 @@
+{"level":"INFO","timestamp":"2019-03-07 14:29:23.144","file":"ch03/main.go:52","msg":"Start to listening the incoming requests on http address: :8081"}
+{"level":"INFO","timestamp":"2019-03-07 14:29:23.145","file":"ch03/main.go:50","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2019-03-07 14:30:34.260","file":"ch03/main.go:52","msg":"Start to listening the incoming requests on http address: :8081"}
+{"level":"INFO","timestamp":"2019-03-07 14:30:34.261","file":"ch03/main.go:50","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2019-03-08 16:10:34.874","file":"ch04/main.go:57","msg":"Start to listening the incoming requests on http address: :8081"}
+{"level":"INFO","timestamp":"2019-03-08 16:10:34.875","file":"ch04/main.go:26","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2019-03-08 16:10:35.878","file":"ch04/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2019-03-08 16:10:58.134","file":"ch04/main.go:57","msg":"Start to listening the incoming requests on http address: :8081"}
+{"level":"INFO","timestamp":"2019-03-08 16:10:58.135","file":"ch04/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2019-03-08 16:11:43.965","file":"ch04/main.go:57","msg":"Start to listening the incoming requests on http address: :8081"}
+{"level":"INFO","timestamp":"2019-03-08 16:11:43.966","file":"ch04/main.go:55","msg":"The router has been deployed successfully."}
