@@ -1,0 +1,19 @@
+runmode: debug
+addr: :8081
+url: http://127.0.0.1:8082
+max_ping_count: 10          # pingServer 尝试次数
+
+log:
+  writers: file,stdout      # file -> logger_file; stdout -> 标准输出，可以同时选择
+  logger_level: DEBUG       # DEBUG, INFO, WARN, ERROR, FATAL
+  logger_file: log/ch03.log
+  log_format_text: false
+  rollingPolicy: size       # daily, size
+  log_rotate_date: 1        # rotate 转存时间，配合 rollingPolicy: daily 使用
+  log_rotate_size: 1024     # rotate 转存大小，配合 rollingPolicy: size 使用
+  log_backup_count: 7       # log_backup_count: 当日志文件达到转存标准时，log 系统会将该日志文件进行压缩备份
+db:
+  name: go-rest-demo
+  addr: 127.18.0.2:3306
+  username: root
+  password: 123456

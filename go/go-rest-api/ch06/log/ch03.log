@@ -18,3 +18,13 @@
 {"level":"INFO","timestamp":"2019-03-08 18:42:43.032","file":"ch06/main.go:55","msg":"The router has been deployed successfully."}
 {"level":"DEBUG","timestamp":"2019-03-08 18:42:52.705","file":"user/create.go:23","msg":"username is [admin], password is []"}
 {"level":"DEBUG","timestamp":"2019-03-08 18:43:10.907","file":"user/create.go:23","msg":"username is [admin], password is [123456]"}
+{"level":"ERROR","timestamp":"2019-03-18 14:24:20.094","file":"model/init.go:29","msg":"Database connection failed. Database name: go-rest-demo","data":{"error":"dial tcp 127.18.0.2:3306: connect: connection refused"}}
+{"level":"INFO","timestamp":"2019-03-18 14:24:20.095","file":"ch06/main.go:57","msg":"Start to listening the incoming requests on http address: :8081"}
+{"level":"INFO","timestamp":"2019-03-18 14:24:20.096","file":"ch06/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"ERROR","timestamp":"2019-03-18 14:28:56.747","file":"model/init.go:29","msg":"Database connection failed. Database name: go-rest-demo","data":{"error":"dial tcp 127.18.0.2:3306: connect: connection refused"}}
+{"level":"INFO","timestamp":"2019-03-18 14:28:56.748","file":"ch06/main.go:57","msg":"Start to listening the incoming requests on http address: :8081"}
+{"level":"INFO","timestamp":"2019-03-18 14:28:56.748","file":"ch06/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2019-03-18 14:29:04.654","file":"user/create.go:23","msg":"username is [admin], password is [123456]"}
+{"level":"ERROR","timestamp":"2019-03-18 14:29:50.492","file":"model/init.go:29","msg":"Database connection failed. Database name: go-rest-demo","data":{"error":"dial tcp 127.18.0.2:3306: connect: connection refused"}}
+{"level":"INFO","timestamp":"2019-03-18 14:29:50.492","file":"ch06/main.go:57","msg":"Start to listening the incoming requests on http address: :8081"}
+{"level":"INFO","timestamp":"2019-03-18 14:29:50.492","file":"ch06/main.go:55","msg":"The router has been deployed successfully."}
