@@ -90,3 +90,42 @@
 {"level":"INFO","timestamp":"2019-03-18 14:30:08.027","file":"ch07/main.go:26","msg":"Waiting for the router, retry in 1 second."}
 {"level":"INFO","timestamp":"2019-03-18 14:30:09.028","file":"ch07/main.go:26","msg":"Waiting for the router, retry in 1 second."}
 {"level":"FATAL","timestamp":"2019-03-18 14:30:10.029","file":"ch07/main.go:53","msg":"The router has no response, or it might took too long to start up.","data":{"error":"Cannot connect to the router.","trace":"goroutine 28 [running]:\ngithub.com/lexkong/log/lager.(*logger).logs(0xc0002ad1a0, 0xc00039e1c0, 0x2, 0x2, 0x4, 0xc64863, 0x42, 0xd2e360, 0xc00038e230, 0x0, ...)\n\t/home/littlesqx/develop/go/src/github.com/lexkong/log/lager/logger.go:135 +0x87b\ngithub.com/lexkong/log/lager.(*logger).log(0xc0002ad1a0, 0x4, 0xc64863, 0x42, 0xd2e360, 0xc00038e230, 0x0, 0x0, 0x0)\n\t/home/littlesqx/develop/go/src/github.com/lexkong/log/lager/logger.go:123 +0xd9\ngithub.com/lexkong/log/lager.(*logger).Fatal(0xc0002ad1a0, 0xc64863, 0x42, 0xd2e360, 0xc00038e230, 0x0, 0x0, 0x0)\n\t/home/littlesqx/develop/go/src/github.com/lexkong/log/lager/logger.go:197 +0x83\ngithub.com/lexkong/log.Fatal(0xc64863, 0x42, 0xd2e360, 0xc00038e230, 0x0, 0x0, 0x0)\n\t/home/littlesqx/develop/go/src/github.com/lexkong/log/st_lager.go:162 +0x7e\nmain.main.func1()\n\t/home/littlesqx/develop/git/coding/go/go-rest-api/ch07/main.go:53 +0x9c\ncreated by main.main\n\t/home/littlesqx/develop/git/coding/go/go-rest-api/ch07/main.go:51 +0x148\n"}}
+{"level":"ERROR","timestamp":"2019-03-19 10:44:28.782","file":"model/init.go:29","msg":"Database connection failed. Database name: go-rest-demo","data":{"error":"dial tcp 127.18.0.2:3306: connect: connection refused"}}
+{"level":"INFO","timestamp":"2019-03-19 10:44:28.783","file":"ch07/main.go:57","msg":"Start to listening the incoming requests on http address: :8081"}
+{"level":"INFO","timestamp":"2019-03-19 10:44:28.783","file":"ch07/main.go:26","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2019-03-19 10:44:29.784","file":"ch07/main.go:26","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2019-03-19 10:44:30.785","file":"ch07/main.go:26","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2019-03-19 10:44:31.786","file":"ch07/main.go:26","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2019-03-19 10:44:32.787","file":"ch07/main.go:26","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2019-03-19 10:44:33.788","file":"ch07/main.go:26","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2019-03-19 10:44:34.789","file":"ch07/main.go:26","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2019-03-19 10:44:35.790","file":"ch07/main.go:26","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2019-03-19 10:44:36.791","file":"ch07/main.go:26","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2019-03-19 10:44:37.792","file":"ch07/main.go:26","msg":"Waiting for the router, retry in 1 second."}
+{"level":"FATAL","timestamp":"2019-03-19 10:44:38.793","file":"ch07/main.go:53","msg":"The router has no response, or it might took too long to start up.","data":{"error":"Cannot connect to the router.","trace":"goroutine 42 [running]:\ngithub.com/lexkong/log/lager.(*logger).logs(0xc00033b740, 0xc0001be1c0, 0x2, 0x2, 0x4, 0xc9ae91, 0x42, 0xd688a0, 0xc0001b8460, 0x0, ...)\n\t/home/littlesqx/develop/go/src/github.com/lexkong/log/lager/logger.go:135 +0x87b\ngithub.com/lexkong/log/lager.(*logger).log(0xc00033b740, 0x4, 0xc9ae91, 0x42, 0xd688a0, 0xc0001b8460, 0x0, 0x0, 0x0)\n\t/home/littlesqx/develop/go/src/github.com/lexkong/log/lager/logger.go:123 +0xd9\ngithub.com/lexkong/log/lager.(*logger).Fatal(0xc00033b740, 0xc9ae91, 0x42, 0xd688a0, 0xc0001b8460, 0x0, 0x0, 0x0)\n\t/home/littlesqx/develop/go/src/github.com/lexkong/log/lager/logger.go:197 +0x83\ngithub.com/lexkong/log.Fatal(0xc9ae91, 0x42, 0xd688a0, 0xc0001b8460, 0x0, 0x0, 0x0)\n\t/home/littlesqx/develop/go/src/github.com/lexkong/log/st_lager.go:162 +0x7e\nmain.main.func1()\n\t/home/littlesqx/develop/git/coding/go/go-rest-api/ch07/main.go:53 +0x9c\ncreated by main.main\n\t/home/littlesqx/develop/git/coding/go/go-rest-api/ch07/main.go:51 +0x148\n"}}
+{"level":"ERROR","timestamp":"2019-03-19 10:45:01.225","file":"model/init.go:29","msg":"Database connection failed. Database name: go-rest-demo","data":{"error":"dial tcp 127.18.0.2:3306: connect: connection refused"}}
+{"level":"INFO","timestamp":"2019-03-19 10:45:01.225","file":"ch07/main.go:57","msg":"Start to listening the incoming requests on http address: :8081"}
+{"level":"INFO","timestamp":"2019-03-19 10:45:01.226","file":"ch07/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2019-03-19 10:45:47.509","file":"ch07/main.go:57","msg":"Start to listening the incoming requests on http address: :8081"}
+{"level":"INFO","timestamp":"2019-03-19 10:45:47.509","file":"ch07/main.go:26","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2019-03-19 10:45:48.511","file":"ch07/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2019-03-19 10:46:33.618","file":"user/create.go:14","msg":"User Create function called.","data":{"X-Request-Id":""}}
+{"level":"INFO","timestamp":"2019-03-19 10:48:24.790","file":"ch07/main.go:57","msg":"Start to listening the incoming requests on http address: :8081"}
+{"level":"INFO","timestamp":"2019-03-19 10:48:24.790","file":"ch07/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2019-03-19 10:52:29.010","file":"ch07/main.go:57","msg":"Start to listening the incoming requests on http address: :8081"}
+{"level":"INFO","timestamp":"2019-03-19 10:52:29.010","file":"ch07/main.go:26","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2019-03-19 10:52:30.012","file":"ch07/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2019-03-19 10:54:12.589","file":"ch07/main.go:57","msg":"Start to listening the incoming requests on http address: :8081"}
+{"level":"INFO","timestamp":"2019-03-19 10:54:12.591","file":"ch07/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2019-03-19 10:58:48.199","file":"ch07/main.go:57","msg":"Start to listening the incoming requests on http address: :8081"}
+{"level":"INFO","timestamp":"2019-03-19 10:58:48.200","file":"ch07/main.go:26","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2019-03-19 10:58:49.202","file":"ch07/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2019-03-19 10:59:06.814","file":"ch07/main.go:57","msg":"Start to listening the incoming requests on http address: :8081"}
+{"level":"INFO","timestamp":"2019-03-19 10:59:06.814","file":"ch07/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2019-03-19 10:59:37.088","file":"ch07/main.go:57","msg":"Start to listening the incoming requests on http address: :8081"}
+{"level":"INFO","timestamp":"2019-03-19 10:59:37.089","file":"ch07/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2019-03-19 11:03:26.979","file":"ch07/main.go:57","msg":"Start to listening the incoming requests on http address: :8081"}
+{"level":"INFO","timestamp":"2019-03-19 11:03:26.980","file":"ch07/main.go:26","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2019-03-19 11:03:27.981","file":"ch07/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2019-03-19 11:06:07.409","file":"user/create.go:14","msg":"User Create function called.","data":{"X-Request-Id":""}}
+{"level":"INFO","timestamp":"2019-03-19 11:07:35.071","file":"user/update.go:15","msg":"Update function called.","data":{"X-Request-Id":""}}

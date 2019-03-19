@@ -28,7 +28,11 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 
 	v1 := g.Group("/v1")
 	{
-		v1.POST("/user", user.Create)	
+		v1.POST("/users", user.Create)         // 创建用户
+		v1.DELETE("/users/:id", user.Delete)   // 删除用户 
+		v1.PUT("/users/:id", user.Update)      // 更新用户
+		v1.GET("/users", user.List)            // 用户列表
+		v1.GET("/users/:username", user.Get)   // 获取指定用户的详细信息
 	}
 
 	return g

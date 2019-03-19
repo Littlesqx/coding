@@ -1,6 +1,6 @@
 runmode: debug
 addr: :8081
-url: http://127.0.0.1:8082
+url: http://127.0.0.1:8081
 max_ping_count: 10          # pingServer 尝试次数
 
 log:

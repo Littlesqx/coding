@@ -1,29 +1,26 @@
 package user
 
 import (
+	"strconv"
+	. "../../handler"
+	"../../model"
 	"../../pkg/errno"
 	"../../util"
-	"../../model"
-	. "../../handler"
 	"github.com/gin-gonic/gin"
 	"github.com/lexkong/log"
 	"github.com/lexkong/log/lager"
 )
 
-func Create(c *gin.Context) {
-	log.Info("User Create function called.", lager.Data{"X-Request-Id": util.GetReqID(c)})
+func Update(c *gin.Context) {
+	log.Info("Update function called.", lager.Data{"X-Request-Id": util.GetReqID(c)})
+	userId, _ := strconv.Atoi(c.Param("id"))
 
-	var r CreateRequest
-
-	if err := c.Bind(&r); err != nil {
+	var u model.UserModel
+	if err := c.Bind(&u); err != nil {
 		SendResponse(c, errno.ErrBind, nil)
-		return
 	}
 
-	u := model.UserModel{
-		Username: r.Username,
-		Password: r.Password,
-	}
+	u.Id = uint64(userId)
 
 	if err := u.Validate(); err != nil {
 		SendResponse(c, errno.ErrValidation, nil)
@@ -35,14 +32,10 @@ func Create(c *gin.Context) {
 		return
 	}
 
-	if err := u.Create(); err != nil {
+	if err := u.Update(); err != nil {
 		SendResponse(c, errno.ErrDatabase, nil)
 		return
 	}
 
-	rsp := CreateResponse {
-		Username: r.Username,
-	}
-
-	SendResponse(c, nil, rsp)
+	SendResponse(c, nil, nil)
 }
