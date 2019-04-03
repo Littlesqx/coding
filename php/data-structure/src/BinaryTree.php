@@ -55,9 +55,9 @@ class BinaryTree
     private function inOrderTraversalGenerator(?Node $node)
     {
         if ($node) {
-            yield from $this->preOrderTraversalGenerator($node->left);
+            yield from $this->inOrderTraversalGenerator($node->left);
             yield $node;
-            yield from $this->preOrderTraversalGenerator($node->right);
+            yield from $this->inOrderTraversalGenerator($node->right);
         }
     }
 
