@@ -54,22 +54,22 @@ class Graph
      */
     public function DFS()
     {
-        $queue = new Stack();
+        $stack = new Stack();
         $visited = [];
         $size = count($this->data);
         for ($i = 0; $i < $size && count($visited) < $size; $i++) {
             if (!array_key_exists($i, $visited)) {
-                $queue->push($i);
+                $stack->push($i);
                 $visited[$i] = true;
             }
-            while (!$queue->isEmpty()) {
-                $current = $queue->pop();
+            while (!$stack->isEmpty()) {
+                $current = $stack->pop();
                 yield $current;
                 for ($j = 0; $j < $size; $j++) {
                     if (!array_key_exists($j, $visited)
                         && $this->data[$current][$j] === 1
                     ) {
-                        $queue->push($j);
+                        $stack->push($j);
                         $visited[$j] = true;
                     }
                 }
