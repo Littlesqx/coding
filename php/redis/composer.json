@@ -1,0 +1,19 @@
+{
+    "name": "littlesqx\/redis",
+    "description": "redis practice",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "littlesqx",
+            "email": "littlesqx@gmail.com"
+        }
+    ],
+    "require": {
+        "predis/predis": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Littlesqx\\Redis\\": "src"
+        }
+    }
+}
