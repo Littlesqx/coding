@@ -13,7 +13,7 @@ class Application extends AbstractApplication
 //        var_dump($this->redis->set('lock:codehole', true, 'ex', 5, 'nx'));
 //        var_dump($this->redis->del(['lock:codehole']));
 
-        $tag = 'lock:codehole:tag';
+        $tag = 'lock:codehole:tag'; // random string
 
         if ($this->redis->set('lock:codehole', $tag, 'ex', 10, 'nx')) {
             // do something
