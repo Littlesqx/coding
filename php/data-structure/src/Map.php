@@ -51,7 +51,7 @@ class Map
             $this->values[] = $value;
             $this->keyValueMapping[array_key_last($this->keys)] = array_key_last($this->values);
         } else {
-            $valueIndex = $this->keyValueMapping[array_search($key, $this->values, true)];
+            $valueIndex = $this->keyValueMapping[array_search($key, $this->keys, true)];
             $this->values[$valueIndex] = $value;
         }
     }
