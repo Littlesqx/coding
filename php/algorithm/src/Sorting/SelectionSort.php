@@ -2,7 +2,6 @@
 
 namespace Algorithm\Sorting\SelectionSort;
 
-
 /**
  * selection sort.
  *

@@ -4,6 +4,7 @@ namespace Algorithm\Tests;
 
 use function Algorithm\isSorted;
 use function Algorithm\randomIntArray;
+use function Algorithm\Sorting\quickSort;
 use PHPUnit\Framework\TestCase;
 
 class SortingTest extends TestCase
@@ -79,4 +80,15 @@ class SortingTest extends TestCase
         $this->assertSame(isSorted($array, $sorted), true);
     }
 
+    /**
+     * @param array $array
+     *
+     * @dataProvider getRandomArray
+     */
+    public function testQuickSort(array $array)
+    {
+        $sorted = quickSort($array);
+
+        $this->assertTrue(isSorted($array, $sorted));
+    }
 }

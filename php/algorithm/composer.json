@@ -24,11 +24,12 @@
             "src/Sorting/SelectionSort.php",
             "src/Sorting/MergeSort.php",
             "src/Sorting/ShellSort.php",
+            "src/Sorting/QuickSort.php",
             "src/Helper.php"
         ]
     },
     "scripts": {
-        "test": "./vendor/bin/phpunit"
+        "test": "./vendor/bin/phpunit --color=always"
     }
 
 }
