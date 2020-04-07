@@ -44,7 +44,10 @@ class SortingTest extends TestCase
     public function testBubbleSort(array $array)
     {
         $sorted = \Algorithm\Sorting\BubbleSort\sort($array);
-        $this->assertSame(isSorted($array, $sorted), true);
+        $this->assertTrue(isSorted($array, $sorted));
+
+        $sorted = \Algorithm\Sorting\BubbleSort\sortV2($array);
+        $this->assertTrue(isSorted($array, $sorted));
     }
 
     /**
