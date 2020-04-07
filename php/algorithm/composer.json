@@ -25,6 +25,7 @@
             "src/Sorting/MergeSort.php",
             "src/Sorting/ShellSort.php",
             "src/Sorting/QuickSort.php",
+            "src/Recursion/Fib.php",
             "src/Helper.php"
         ]
     },
