@@ -1,12 +1,11 @@
 <?php
 
 /*
- * This file is part of the data-structure-php.
+ * This file is part of the littlesqx/data-structure.
  *
  * (c) littlesqx <littlesqx@gmail.com>
  *
- * This source file is subject to the MIT license that is bundled
- * with this source code in the file LICENSE.
+ * This source file is subject to the MIT license that is bundled.
  */
 
 namespace Littlesqx\DataStructure\Test;
@@ -22,11 +21,11 @@ class SetTest extends TestCase
         $this->assertFalse($set->has(1));
         $set->add(1);
         $this->assertTrue($set->has(1));
-        $this->assertEquals(1, $set->size());
+        $this->assertSame(1, $set->size());
         $set->add(1);
-        $this->assertEquals(1, $set->size());
+        $this->assertSame(1, $set->size());
         $set->add('1');
-        $this->assertEquals(2, $set->size());
+        $this->assertSame(2, $set->size());
     }
 
     public function testDelete()
@@ -49,17 +48,17 @@ class SetTest extends TestCase
     public function testClear()
     {
         $set = new Set([1, [1], new \stdClass()]);
-        $this->assertEquals(3, $set->size());
+        $this->assertSame(3, $set->size());
         $set->clear();
-        $this->assertEquals(0, $set->size());
+        $this->assertSame(0, $set->size());
     }
 
     public function testSize()
     {
         $set = new Set([1, [1], new \stdClass()]);
-        $this->assertEquals(3, $set->size());
+        $this->assertSame(3, $set->size());
         $set->add(2);
-        $this->assertEquals(4, $set->size());
+        $this->assertSame(4, $set->size());
     }
 
     public function testTraversal()

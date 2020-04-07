@@ -1,16 +1,14 @@
 <?php
 
 /*
- * This file is part of the data-structure-php.
+ * This file is part of the littlesqx/data-structure.
  *
  * (c) littlesqx <littlesqx@gmail.com>
  *
- * This source file is subject to the MIT license that is bundled
- * with this source code in the file LICENSE.
+ * This source file is subject to the MIT license that is bundled.
  */
 
 namespace Littlesqx\DataStructure;
-
 
 class Queue
 {
@@ -46,6 +44,6 @@ class Queue
      */
     public function isEmpty()
     {
-        return count($this->elements) === 0;
+        return 0 === count($this->elements);
     }
 }

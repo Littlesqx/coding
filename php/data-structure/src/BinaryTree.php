@@ -1,18 +1,16 @@
 <?php
 
 /*
- * This file is part of the data-structure-php.
+ * This file is part of the littlesqx/data-structure.
  *
  * (c) littlesqx <littlesqx@gmail.com>
  *
- * This source file is subject to the MIT license that is bundled
- * with this source code in the file LICENSE.
+ * This source file is subject to the MIT license that is bundled.
  */
 
 namespace Littlesqx\DataStructure;
 
 use Littlesqx\DataStructure\Support\TreeNode as Node;
-use Littlesqx\DataStructure\Support\TreeNode;
 
 class BinaryTree
 {
@@ -91,7 +89,7 @@ class BinaryTree
         $queue->enqueue($this->root);
         while (!$queue->isEmpty()) {
             $current = $queue->dequeue();
-            /** @var $current TreeNode|null */
+            /** @var $current Node|null */
             if ($current) {
                 yield $current;
                 $queue->enqueue($current->left);
@@ -138,12 +136,13 @@ class BinaryTree
     private function depthTraversal(?Node $node, $currentDepth = 0)
     {
         if ($node) {
-            $currentDepth++;
+            ++$currentDepth;
             $currentDepth = max(
                 $this->depthTraversal($node->left, $currentDepth),
                 $this->depthTraversal($node->right, $currentDepth)
             );
         }
+
         return $currentDepth;
     }
 }

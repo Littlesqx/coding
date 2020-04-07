@@ -1,19 +1,17 @@
 <?php
 
 /*
- * This file is part of the data-structure-php.
+ * This file is part of the littlesqx/data-structure.
  *
  * (c) littlesqx <littlesqx@gmail.com>
  *
- * This source file is subject to the MIT license that is bundled
- * with this source code in the file LICENSE.
+ * This source file is subject to the MIT license that is bundled.
  */
 
 namespace Littlesqx\DataStructure;
 
-
-use Littlesqx\DataStructure\Support\TreeNode as Node;
 use Littlesqx\DataStructure\Support\TreeNode;
+use Littlesqx\DataStructure\Support\TreeNode as Node;
 
 class Tree
 {
@@ -78,7 +76,7 @@ class Tree
     private function leavesGenerator(?Node $node)
     {
         if ($node) {
-            if (count($node->children) === 0) {
+            if (0 === count($node->children)) {
                 yield $node;
             } else {
                 foreach ($node->children as $child) {
@@ -101,13 +99,14 @@ class Tree
     private function depthTraversal(?Node $node, $currentDepth = 0)
     {
         if ($node) {
-            $currentDepth++;
+            ++$currentDepth;
             $childDepth = [];
             foreach ($node->children as $child) {
                 $childDepth[] = $this->depthTraversal($child, $currentDepth);
             }
             $currentDepth = max($childDepth);
         }
+
         return $currentDepth;
     }
 }

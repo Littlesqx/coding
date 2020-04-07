@@ -1,12 +1,11 @@
 <?php
 
 /*
- * This file is part of the data-structure-php.
+ * This file is part of the littlesqx/data-structure.
  *
  * (c) littlesqx <littlesqx@gmail.com>
  *
- * This source file is subject to the MIT license that is bundled
- * with this source code in the file LICENSE.
+ * This source file is subject to the MIT license that is bundled.
  */
 
 namespace Littlesqx\DataStructure;
@@ -59,7 +58,8 @@ class LinkedList
         $node->next = $this->last->next;
         $this->last->next = $node;
         $this->last = $node;
-        $this->size++;
+        ++$this->size;
+
         return $this;
     }
 
@@ -77,19 +77,21 @@ class LinkedList
         while ($current->next) {
             if ($nextIndex === $index) {
                 $current->next = $current->next->next;
-                $this->size--;
+                --$this->size;
+
                 return true;
             }
             $current = $current->next;
-            $nextIndex++;
+            ++$nextIndex;
         }
+
         return false;
     }
 
     /**
      * Insert a node at the specified position of the linkedList.
      *
-     * @param int $index
+     * @param int  $index
      * @param Node $node
      *
      * @return bool
@@ -102,12 +104,14 @@ class LinkedList
             if ($nextIndex === $index) {
                 $node->next = $current->next;
                 $current->next = $node;
-                $this->size++;
+                ++$this->size;
+
                 return true;
             }
             $current = $current->next;
-            $nextIndex++;
+            ++$nextIndex;
         }
+
         return false;
     }
 
@@ -124,6 +128,7 @@ class LinkedList
             $elements[] = $current->value;
             $current = $current->next;
         }
+
         return $elements;
     }
 }

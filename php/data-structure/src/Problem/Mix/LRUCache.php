@@ -1,5 +1,13 @@
 <?php
 
+/*
+ * This file is part of the littlesqx/data-structure.
+ *
+ * (c) littlesqx <littlesqx@gmail.com>
+ *
+ * This source file is subject to the MIT license that is bundled.
+ */
+
 namespace Littlesqx\DataStructure\Problem\Mix;
 
 use Littlesqx\DataStructure\DoubleLinkedList;
@@ -47,6 +55,7 @@ class LRUCache
      * @param string $key
      *
      * @return mixed|null
+     *
      * @throws \Exception
      */
     public function get(string $key)

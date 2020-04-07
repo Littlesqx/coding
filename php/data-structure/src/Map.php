@@ -1,12 +1,11 @@
 <?php
 
 /*
- * This file is part of the data-structure-php.
+ * This file is part of the littlesqx/data-structure.
  *
  * (c) littlesqx <littlesqx@gmail.com>
  *
- * This source file is subject to the MIT license that is bundled
- * with this source code in the file LICENSE.
+ * This source file is subject to the MIT license that is bundled.
  */
 
 namespace Littlesqx\DataStructure;
@@ -68,8 +67,10 @@ class Map
         $keyIndex = array_search($key, $this->keys, true);
         if (false !== $keyIndex) {
             $valueIndex = $this->keyValueMapping[$keyIndex] ?? null;
+
             return false !== $valueIndex ? ($this->values[$valueIndex] ?? null) : null;
         }
+
         return null;
     }
 
@@ -102,8 +103,10 @@ class Map
                 $this->values[$valueIndex],
                 $this->keyValueMapping[$keyIndex]
             );
+
             return true;
         }
+
         return false;
     }
 
@@ -146,5 +149,4 @@ class Map
             yield [$key, $this->get($key)];
         }
     }
-
 }

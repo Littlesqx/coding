@@ -1,12 +1,11 @@
 <?php
 
 /*
- * This file is part of the data-structure-php.
+ * This file is part of the littlesqx/data-structure.
  *
  * (c) littlesqx <littlesqx@gmail.com>
  *
- * This source file is subject to the MIT license that is bundled
- * with this source code in the file LICENSE.
+ * This source file is subject to the MIT license that is bundled.
  */
 
 namespace Littlesqx\DataStructure;
@@ -43,6 +42,7 @@ class Set implements \IteratorAggregate
         if (!in_array($value, $this->elements, true)) {
             $this->elements[] = $value;
         }
+
         return $this;
     }
 
@@ -60,6 +60,7 @@ class Set implements \IteratorAggregate
         if ($isDelete) {
             unset($this->elements[$index]);
         }
+
         return $isDelete;
     }
 
@@ -84,7 +85,7 @@ class Set implements \IteratorAggregate
     }
 
     /**
-     * Retrieve an external iterator
+     * Retrieve an external iterator.
      *
      * @return Traversable
      *

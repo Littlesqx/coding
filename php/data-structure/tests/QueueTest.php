@@ -1,12 +1,11 @@
 <?php
 
 /*
- * This file is part of the coding.
+ * This file is part of the littlesqx/data-structure.
  *
  * (c) littlesqx <littlesqx@gmail.com>
  *
- * This source file is subject to the MIT license that is bundled
- * with this source code in the file LICENSE.
+ * This source file is subject to the MIT license that is bundled.
  */
 
 namespace Littlesqx\DataStructure\Test;
@@ -16,7 +15,6 @@ use PHPUnit\Framework\TestCase;
 
 class QueueTest extends TestCase
 {
-
     public function testCanEnAndDeQueue()
     {
         $queue = new Queue();

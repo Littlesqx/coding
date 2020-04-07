@@ -1,12 +1,11 @@
 <?php
 
 /*
- * This file is part of the data-structure.
+ * This file is part of the littlesqx/data-structure.
  *
  * (c) littlesqx <littlesqx@gmail.com>
  *
- * This source file is subject to the MIT license that is bundled
- * with this source code in the file LICENSE.
+ * This source file is subject to the MIT license that is bundled.
  */
 
 namespace Littlesqx\DataStructure\Problem\Collection;
@@ -39,6 +38,7 @@ class MergeSortedArrays
                 $sortedArray[] = array_shift($this->sortedArray2);
             }
         }
+
         return array_merge($sortedArray, $this->sortedArray1, $this->sortedArray2);
     }
 }

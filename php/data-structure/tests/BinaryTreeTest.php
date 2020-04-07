@@ -1,12 +1,11 @@
 <?php
 
 /*
- * This file is part of the coding.
+ * This file is part of the littlesqx/data-structure.
  *
  * (c) littlesqx <littlesqx@gmail.com>
  *
- * This source file is subject to the MIT license that is bundled
- * with this source code in the file LICENSE.
+ * This source file is subject to the MIT license that is bundled.
  */
 
 namespace Littlesqx\DataStructure\Test;
@@ -47,7 +46,7 @@ class BinaryTreeTest extends TestCase
     {
         $actual = [];
         foreach ($this->tree->preOrderTraversal() as $node) {
-            /** @var TreeNode $node */
+            /* @var TreeNode $node */
             $actual[] = $node->value;
         }
         $this->assertSame([1, 2, 4, 5, 7, 8, 3, 6], $actual);
@@ -57,7 +56,7 @@ class BinaryTreeTest extends TestCase
     {
         $actual = [];
         foreach ($this->tree->postOrderTraversal() as $node) {
-            /** @var TreeNode $node */
+            /* @var TreeNode $node */
             $actual[] = $node->value;
         }
         $this->assertSame([4, 7, 8, 5, 2, 6, 3, 1], $actual);
@@ -67,7 +66,7 @@ class BinaryTreeTest extends TestCase
     {
         $actual = [];
         foreach ($this->tree->inOrderTraversal() as $node) {
-            /** @var TreeNode $node */
+            /* @var TreeNode $node */
             $actual[] = $node->value;
         }
         $this->assertSame([4, 2, 7, 5, 8, 1, 3, 6], $actual);
@@ -77,7 +76,7 @@ class BinaryTreeTest extends TestCase
     {
         $actual = [];
         foreach ($this->tree->traversalInLayer() as $node) {
-            /** @var TreeNode $node */
+            /* @var TreeNode $node */
             $actual[] = $node->value;
         }
 
@@ -88,7 +87,7 @@ class BinaryTreeTest extends TestCase
     {
         $actual = [];
         foreach ($this->tree->leaves() as $node) {
-            /** @var TreeNode $node */
+            /* @var TreeNode $node */
             $actual[] = $node->value;
         }
 

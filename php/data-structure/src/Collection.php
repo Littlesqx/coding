@@ -1,12 +1,11 @@
 <?php
 
 /*
- * This file is part of the data-structure-php.
+ * This file is part of the littlesqx/data-structure.
  *
  * (c) littlesqx <littlesqx@gmail.com>
  *
- * This source file is subject to the MIT license that is bundled
- * with this source code in the file LICENSE.
+ * This source file is subject to the MIT license that is bundled.
  */
 
 namespace Littlesqx\DataStructure;
@@ -26,11 +25,11 @@ class Collection implements \IteratorAggregate, \Countable
     }
 
     /**
-     * Whether a offset exists
+     * Whether a offset exists.
      *
-     * @param mixed $offset An offset to check for.
+     * @param mixed $offset an offset to check for
      *
-     * @return boolean true on success or false on failure.
+     * @return bool true on success or false on failure
      */
     public function exists(int $offset): bool
     {
@@ -38,11 +37,11 @@ class Collection implements \IteratorAggregate, \Countable
     }
 
     /**
-     * Offset to retrieve
+     * Offset to retrieve.
      *
-     * @param mixed $offset The offset to retrieve.
+     * @param mixed $offset the offset to retrieve
      *
-     * @return mixed Can return all value types.
+     * @return mixed can return all value types
      */
     public function get(int $offset)
     {
@@ -50,12 +49,10 @@ class Collection implements \IteratorAggregate, \Countable
     }
 
     /**
-     * Offset to set
+     * Offset to set.
      *
-     * @param int $offset The offset to assign the value to.
-     * @param mixed $value The value to set.
-     *
-     * @return void
+     * @param int   $offset the offset to assign the value to
+     * @param mixed $value  the value to set
      */
     public function set(int $offset, $value)
     {
@@ -63,11 +60,9 @@ class Collection implements \IteratorAggregate, \Countable
     }
 
     /**
-     * Offset to unset
+     * Offset to unset.
      *
-     * @param int $offset The offset to unset.
-     *
-     * @return void
+     * @param int $offset the offset to unset
      */
     public function unset(int $offset)
     {
@@ -75,11 +70,11 @@ class Collection implements \IteratorAggregate, \Countable
     }
 
     /**
-     * Push an item into the elements
+     * Push an item into the elements.
      *
-     * @param mixed $value The value to push.
+     * @param mixed $value the value to push
      *
-     * @return int The new numbers of elements.
+     * @return int the new numbers of elements
      */
     public function push($value)
     {
@@ -87,9 +82,9 @@ class Collection implements \IteratorAggregate, \Countable
     }
 
     /**
-     * Pop an item from the elements
+     * Pop an item from the elements.
      *
-     * @return mixed The value to pop.
+     * @return mixed the value to pop
      */
     public function pop()
     {
@@ -97,9 +92,9 @@ class Collection implements \IteratorAggregate, \Countable
     }
 
     /**
-     * Count elements of an object
+     * Count elements of an object.
      *
-     * @return int The custom count as an integer.
+     * @return int the custom count as an integer
      */
     public function count(): int
     {
@@ -113,7 +108,7 @@ class Collection implements \IteratorAggregate, \Countable
      */
     public function isEmpty(): bool
     {
-        return count($this->elements) === 0;
+        return 0 === count($this->elements);
     }
 
     /**
@@ -127,11 +122,11 @@ class Collection implements \IteratorAggregate, \Countable
     }
 
     /**
-     * Retrieve an external iterator
+     * Retrieve an external iterator.
      *
-     * @link https://php.net/manual/en/iteratoraggregate.getiterator.php
+     * @see https://php.net/manual/en/iteratoraggregate.getiterator.php
      *
-     * @return Traversable An instance of an object implementing.
+     * @return Traversable an instance of an object implementing
      */
     public function getIterator(): Traversable
     {

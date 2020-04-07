@@ -1,12 +1,11 @@
 <?php
 
 /*
- * This file is part of the data-structure-php.
+ * This file is part of the littlesqx/data-structure.
  *
  * (c) littlesqx <littlesqx@gmail.com>
  *
- * This source file is subject to the MIT license that is bundled
- * with this source code in the file LICENSE.
+ * This source file is subject to the MIT license that is bundled.
  */
 
 namespace Littlesqx\DataStructure\Support;
@@ -19,12 +18,12 @@ class Node
     public $value;
 
     /**
-     * @var null|Node
+     * @var Node|null
      */
     public $next = null;
 
     /**
-     * @var null|Node
+     * @var Node|null
      */
     public $prev = null;
 

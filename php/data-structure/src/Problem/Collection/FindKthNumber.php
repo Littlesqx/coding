@@ -1,12 +1,11 @@
 <?php
 
 /*
- * This file is part of the php.
+ * This file is part of the littlesqx/data-structure.
  *
  * (c) littlesqx <littlesqx@gmail.com>
  *
- * This source file is subject to the MIT license that is bundled
- * with this source code in the file LICENSE.
+ * This source file is subject to the MIT license that is bundled.
  */
 
 namespace Littlesqx\DataStructure\Problem\Collection;
@@ -35,13 +34,14 @@ class FindKthNumber
         if ($this->kTh > $size) {
             throw new \InvalidArgumentException("kTh number: {$this->kTh} is larger than the size of items.");
         }
-        for ($i = 0; $i < $this->kTh; $i++) {
-            for ($j = 0; $j < $size - $i - 1; $j++) {
-                if ($this->items[$j+1] < $this->items[$j]) {
-                    [$this->items[$j+1], $this->items[$j]] = [$this->items[$j], $this->items[$j+1]];
+        for ($i = 0; $i < $this->kTh; ++$i) {
+            for ($j = 0; $j < $size - $i - 1; ++$j) {
+                if ($this->items[$j + 1] < $this->items[$j]) {
+                    [$this->items[$j + 1], $this->items[$j]] = [$this->items[$j], $this->items[$j + 1]];
                 }
             }
         }
+
         return $this->items[$size - $this->kTh];
     }
 }

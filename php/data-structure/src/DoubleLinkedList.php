@@ -1,5 +1,13 @@
 <?php
 
+/*
+ * This file is part of the littlesqx/data-structure.
+ *
+ * (c) littlesqx <littlesqx@gmail.com>
+ *
+ * This source file is subject to the MIT license that is bundled.
+ */
+
 namespace Littlesqx\DataStructure;
 
 use Littlesqx\DataStructure\Support\Node;
@@ -23,6 +31,7 @@ class DoubleLinkedList
 
     /**
      * @param Node $node
+     *
      * @throws \Exception
      */
     public function addFirst(Node $node)
@@ -42,7 +51,7 @@ class DoubleLinkedList
 
     /**
      * @param Node $node
-     * @param int $index
+     * @param int  $index
      *
      * @throws \Exception
      */
@@ -54,11 +63,12 @@ class DoubleLinkedList
         $temp->next = $node;
         $node->prev = $temp;
 
-        $this->size++;
+        ++$this->size;
     }
 
     /**
      * @return Node|null
+     *
      * @throws \Exception
      */
     public function removeFirst()
@@ -72,16 +82,17 @@ class DoubleLinkedList
      * @param int $index
      *
      * @return Node|null
+     *
      * @throws \Exception
      */
     public function remove(int $index)
     {
-        $temp = $this->getNode($index+1);
+        $temp = $this->getNode($index + 1);
 
         $temp->prev && $temp->prev->next = $temp->next;
         $temp->next && $temp->next->prev = $temp->prev;
 
-        $this->size--;
+        --$this->size;
 
         return $temp;
     }
@@ -91,16 +102,17 @@ class DoubleLinkedList
         $node->prev && $node->prev->next = $node->next;
         $node->next && $node->next->prev = $node->prev;
 
-        $this->size--;
+        --$this->size;
     }
 
     /**
      * @return Node|null
+     *
      * @throws \Exception
      */
     public function removeLast()
     {
-        $temp = $this->remove($this->size-1);
+        $temp = $this->remove($this->size - 1);
 
         return $temp;
     }
@@ -117,6 +129,7 @@ class DoubleLinkedList
 
     /**
      * @param int $index
+     *
      * @return Node|null
      *
      * @throws \Exception
@@ -140,5 +153,4 @@ class DoubleLinkedList
     {
         return $this->size;
     }
-
 }

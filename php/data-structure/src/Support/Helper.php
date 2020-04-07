@@ -1,12 +1,11 @@
 <?php
 
 /*
- * This file is part of the data-structure-php.
+ * This file is part of the littlesqx/data-structure.
  *
  * (c) littlesqx <littlesqx@gmail.com>
  *
- * This source file is subject to the MIT license that is bundled
- * with this source code in the file LICENSE.
+ * This source file is subject to the MIT license that is bundled.
  */
 
 if (!function_exists('array_key_last')) {
@@ -18,14 +17,16 @@ if (!function_exists('array_key_last')) {
      *
      * @param array $array An array
      *
-     * @return mixed The last key of array if the array is not empty; NULL otherwise.
+     * @return mixed the last key of array if the array is not empty; NULL otherwise
      */
-    function array_key_last(array $array) {
+    function array_key_last(array $array)
+    {
         $key = null;
         if (is_array($array)) {
             end($array);
             $key = key($array);
         }
+
         return $key;
     }
 }
