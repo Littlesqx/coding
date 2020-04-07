@@ -21,9 +21,7 @@ if (!function_exists('quickSort')) {
      */
     function quickSort(array $values): array
     {
-        $length = count($values);
-
-        if ($length <= 1) {
+        if (($length = count($values)) <= 1) {
             return $values;
         }
 
@@ -35,5 +33,54 @@ if (!function_exists('quickSort')) {
         }
 
         return array_merge(quickSort($less), [$pivot], quickSort($greater));
+    }
+}
+
+if (!function_exists('quickSortV2')) {
+    /**
+     * Quick sort (in-place).
+     *
+     * @param array $array
+     *
+     * @return array
+     */
+    function quickSortV2(array $array): array
+    {
+        ($func = function (array &$array, $low, $high) use (&$func) {
+            if ($low < $high) {
+                $pivot = partition($array, $low, $high);
+                $func($array, $low, $pivot-1);
+                $func($array, $pivot+1, $high);
+            }
+        })($array, 0, count($array) - 1);
+
+        return $array;
+    }
+
+    /**
+     * @param array $array
+     * @param int $low
+     * @param int $high
+     *
+     * @return int
+     */
+    function partition(array &$array, int $low, int $high): int
+    {
+        $pivot = $array[$low];
+
+        while ($low < $high) {
+            while ($low < $high && $array[$high] > $pivot) {
+                $high--;
+            }
+            $array[$low] = $array[$high];
+            while ($low < $high && $array[$low] <= $pivot) {
+                $low++;
+            }
+            $array[$high] = $array[$low];
+        }
+
+        $array[$low] = $pivot;
+
+        return $low;
     }
 }
