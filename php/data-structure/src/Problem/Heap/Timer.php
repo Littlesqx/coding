@@ -26,6 +26,8 @@ final class Timer
      */
     private static $timer;
 
+    private static $looping = true;
+
     private function __clone()
     {
     }
@@ -64,7 +66,7 @@ final class Timer
         };
 
         Coroutine::create(function () {
-            while (true) {
+            while (self::$looping) {
                 if ($id = $this->heap->extract()) {
                     if (is_callable($task = self::$taskMap[$id])) {
                         try {
@@ -102,7 +104,7 @@ final class Timer
         Coroutine::create(function () use ($executeTime, $callback, $delay) {
             $after = $executeTime - (int) ((microtime(true) * 1000));
             Coroutine::sleep(round($after / 1000 + 0.0005, 3));
-            self::tick($callback, $delay);
+            self::$looping && self::tick($callback, $delay);
         });
 
         return $id;
@@ -115,5 +117,18 @@ final class Timer
         self::getInstance()->heap->insert([$id, (int) (microtime(true) * 1000) + max($delay, 0)]);
 
         return $id;
+    }
+
+    public static function clear($id)
+    {
+        if (isset(self::$taskMap[$id])) {
+            unset(self::$taskMap[$id]);
+        }
+    }
+
+    public static function clearAll()
+    {
+        self::$taskMap = [];
+        self::$looping = false;
     }
 }
