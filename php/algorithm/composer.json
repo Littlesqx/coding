@@ -19,15 +19,7 @@
             "Algorithm\\": "src"
         },
         "files": [
-            "src/Sorting/InsertionSort.php",
-            "src/Sorting/BubbleSort.php",
-            "src/Sorting/SelectionSort.php",
-            "src/Sorting/MergeSort.php",
-            "src/Sorting/ShellSort.php",
-            "src/Sorting/QuickSort.php",
-            "src/Sorting/HeapSort.php",
-            "src/Recursion/Fib.php",
-            "src/Helper.php"
+            "src/bootstrap.php"
         ]
     },
     "scripts": {
