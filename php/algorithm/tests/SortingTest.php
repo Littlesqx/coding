@@ -4,6 +4,7 @@ namespace Algorithm\Tests;
 
 use function Algorithm\isSorted;
 use function Algorithm\randomIntArray;
+use function Algorithm\Sorting\heapSort;
 use function Algorithm\Sorting\quickSort;
 use function Algorithm\Sorting\quickSortV2;
 use PHPUnit\Framework\TestCase;
@@ -96,6 +97,18 @@ class SortingTest extends TestCase
         $this->assertTrue(isSorted($array, $sorted));
 
         $sorted = quickSortV2($array);
+        $this->assertTrue(isSorted($array, $sorted));
+    }
+
+    /**
+     * @param array $array
+     *
+     * @dataProvider getRandomArray
+     */
+    public function testHeapSort(array $array)
+    {
+        $sorted = heapSort($array);
+
         $this->assertTrue(isSorted($array, $sorted));
     }
 }
