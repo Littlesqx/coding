@@ -196,9 +196,4 @@ abstract class Heap implements \Iterator, \Countable
     }
 
     abstract public function compare($firstValue, $secondValue): int;
-
-    public function display()
-    {
-        var_dump($this->heap);
-    }
 }
