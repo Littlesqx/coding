@@ -170,7 +170,7 @@ abstract class Heap implements \Iterator, \Countable
     {
         $highestChildIndex = $this->getHighestChildIndex($index);
         if (null !== $highestChildIndex
-            && $this->compare($this->heap[$highestChildIndex], $this->heap[$index] > 0)
+            && $this->compare($this->heap[$highestChildIndex], $this->heap[$index]) > 0
         ) {
             $this->swapElements($highestChildIndex, $index);
             $this->heapifyDown($highestChildIndex);
@@ -196,4 +196,9 @@ abstract class Heap implements \Iterator, \Countable
     }
 
     abstract public function compare($firstValue, $secondValue): int;
+
+    public function display()
+    {
+        var_dump($this->heap);
+    }
 }
